@@ -1,5 +1,18 @@
+import recipeData from "./recipe.json"
 function AuthorInfo() {
-   return;
+    const authorImage = recipeData[0].authorImage
+    const recipeAuthor = recipeData[0].author
+    const recipeAuthorImage = <img src={authorImage} alt={recipeAuthor} className="authorImage" />
+    const recipeWebsite = <a href={recipeData[0].website}>  Her Website!!!!!!</a>
+    return (
+      <div>
+         {recipeAuthorImage}
+         {recipeAuthor}
+         <br/>
+         {recipeWebsite}
+      </div>
+   );
+
  }
  
  export default AuthorInfo;
